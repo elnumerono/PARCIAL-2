@@ -34,6 +34,21 @@ public class Funcion {
         this.listFuncionBoletas = new ArrayList<>();
     }
     /**
+     * Metodo para verificar si el asiento esta ocupado
+     * @param fila elegida
+     * @param numAsiento elegido
+     * @return
+     */
+    public boolean verificarAsientoOcupado(int fila, int numAsiento) {
+        for (int i = 0; i < listFuncionBoletas.size(); i++) {
+            Boleta b = listFuncionBoletas.get(i);
+            if (b.getFila() == fila && b.getNumAsiento() == numAsiento) {
+                return true;
+            }
+        }
+        return false;
+    }
+    /**
      * Metodo toString de la clase Funcion
      * @return
      */
